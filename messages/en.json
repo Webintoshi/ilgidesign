@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "title": "İlgi Design | Premium Exhibition Stand Design",
+    "description": "20+ years of experience in exhibition stand design. Wooden stands, Maxima systems, and Germany exhibition solutions.",
+    "keywords": "exhibition stand, stand design, wooden stand, maxima stand, exhibition booth design"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "references": "References",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Your Expert Partner in",
+    "titleHighlight": "Exhibition Stand Design",
+    "subtitle": "With 20+ years of experience, we create intelligently designed exhibition stands that best represent your brand.",
+    "ctaProjects": "View Our Projects",
+    "ctaContact": "Contact Us"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Innovative and impressive exhibition stand solutions tailored to your brand",
+    "wooden": {
+      "title": "Wooden Stand",
+      "description": "Custom wooden stand designs with natural and elegant appearance. Adds value to your brand with warm atmosphere and durable structure."
+    },
+    "maxima": {
+      "title": "Maxima Stand",
+      "description": "Maxima stand systems offering versatile use with modular and flexible structure. Quick setup and reusability advantage."
+    },
+    "germany": {
+      "title": "Germany Exhibition Stand",
+      "description": "Professional representation at international exhibitions with European standards. We provide complete services in Germany and across Europe."
+    },
+    "detailButton": "Learn More"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Some of our prestigious completed projects",
+    "viewAll": "All Projects",
+    "viewProject": "View Project",
+    "categories": {
+      "all": "All",
+      "wooden": "Wooden Stand",
+      "maxima": "Maxima Stand",
+      "germany": "Germany"
+    }
+  },
+  "whyUs": {
+    "title": "Why İlgi Design?",
+    "subtitle": "Reasons why those who choose us for exhibition stand design",
+    "stats": {
+      "experience": {
+        "value": "20+",
+        "label": "Years of Experience"
+      },
+      "projects": {
+        "value": "500+",
+        "label": "Completed Projects"
+      },
+      "europe": {
+        "value": "15+",
+        "label": "European Countries"
+      },
+      "satisfaction": {
+        "value": "%99",
+        "label": "Client Satisfaction"
+      }
+    },
+    "features": {
+      "design": {
+        "title": "Unique Design",
+        "description": "Creative and eye-catching designs customized for each brand"
+      },
+      "quality": {
+        "title": "Quality Workmanship",
+        "description": "Flawless execution with the best materials and craftsmen"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "Uninterrupted technical support throughout the exhibition process"
+      },
+      "time": {
+        "title": "On-Time Delivery",
+        "description": "We deliver your projects within the committed timeframe"
+      }
+    }
+  },
+  "references": {
+    "title": "Our References",
+    "subtitle": "Our valued business partners who choose us",
+    "testimonialsTitle": "Client Testimonials"
+  },
+  "footer": {
+    "description": "20+ years of experience in exhibition stand design and implementation. Solutions that best represent your brand.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "rights": "All rights reserved."
+  },
+  "placeholders": {
+    "HERO_001": "[HERO_001] - Homepage Hero Image - 1920x1080px - General exhibition stand visual",
+    "HERO_002": "[HERO_002] - About Hero Image - 1920x600px - Office/team photo",
+    "HIZMET_001": "[HIZMET_001] - Wooden Stand Image - 800x600px - Wooden stand example",
+    "HIZMET_002": "[HIZMET_002] - Maxima Stand Image - 800x600px - Maxima stand example", 
+    "HIZMET_003": "[HIZMET_003] - Germany Exhibition Image - 800x600px - Germany exhibition stand",
+    "PROJE_001": "[PROJE_001] - Project Image #1 - 800x600px - Completed stand project",
+    "PROJE_002": "[PROJE_002] - Project Image #2 - 800x600px - Completed stand project",
+    "PROJE_003": "[PROJE_003] - Project Image #3 - 800x600px - Completed stand project",
+    "PROJE_004": "[PROJE_004] - Project Image #4 - 800x600px - Completed stand project",
+    "PROJE_005": "[PROJE_005] - Project Image #5 - 800x600px - Completed stand project",
+    "PROJE_006": "[PROJE_006] - Project Image #6 - 800x600px - Completed stand project",
+    "PROJE_007": "[PROJE_007] - Project Image #7 - 800x600px - Extra project visual",
+    "PROJE_008": "[PROJE_008] - Project Image #8 - 800x600px - Extra project visual",
+    "REF_LOGO_001": "[REF_LOGO_001] - Reference Logo #1 - 200x100px - Client logo (grayscale)",
+    "REF_LOGO_002": "[REF_LOGO_002] - Reference Logo #2 - 200x100px - Client logo (grayscale)",
+    "REF_LOGO_003": "[REF_LOGO_003] - Reference Logo #3 - 200x100px - Client logo (grayscale)",
+    "REF_LOGO_004": "[REF_LOGO_004] - Reference Logo #4 - 200x100px - Client logo (grayscale)",
+    "REF_LOGO_005": "[REF_LOGO_005] - Reference Logo #5 - 200x100px - Client logo (grayscale)",
+    "REF_LOGO_006": "[REF_LOGO_006] - Reference Logo #6 - 200x100px - Client logo (grayscale)",
+    "REF_LOGO_007": "[REF_LOGO_007] - Reference Logo #7 - 200x100px - Client logo (grayscale)",
+    "REF_LOGO_008": "[REF_LOGO_008] - Reference Logo #8 - 200x100px - Client logo (grayscale)",
+    "EKIP_001": "[EKIP_001] - Team Member #1 - 400x500px - Founder/Executive photo",
+    "EKIP_002": "[EKIP_002] - Team Member #2 - 400x500px - Designer photo",
+    "EKIP_003": "[EKIP_003] - Team Member #3 - 400x500px - Project Manager photo",
+    "EKIP_004": "[EKIP_004] - Team Member #4 - 400x500px - Implementation Manager photo",
+    "HAKKIMIZDA_001": "[HAKKIMIZDA_001] - About Image - 1200x800px - Workshop/facility visual"
+  }
+}

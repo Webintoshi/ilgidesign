@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "title": "İlgi Design | Premium Fuar Stand Tasarım",
+    "description": "Fuar standı tasarımında 20+ yıllık deneyim. Ahşap stand, Maxima stand ve Almanya fuar standı çözümleri.",
+    "keywords": "fuar standı, stand tasarım, ahşap stand, maxima stand, fuar standı tasarım"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "projects": "Projeler",
+    "references": "Referanslar",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Fuar Stand Tasarımında",
+    "titleHighlight": "Uzman Çözüm Ortağınız",
+    "subtitle": "20+ yıllık deneyimimizle markanızı en iyi şekilde temsil eden, Akıllıca tasarlanmış fuar standları.",
+    "ctaProjects": "Projelerimizi İncele",
+    "ctaContact": "Bize Ulaşın"
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "subtitle": "Markanıza özel, yenilikçi ve etkileyici fuar standı çözümleri",
+    "wooden": {
+      "title": "Ahşap Stand",
+      "description": "Doğal ve şık görünümüyle öne çıkan özel ahşap stand tasarımları. Sıcak atmosferi ve dayanıklı yapısıyla markanıza değer katar."
+    },
+    "maxima": {
+      "title": "Maxima Stand",
+      "description": "Modüler ve esnek yapısıyla çok yönlü kullanım sunan Maxima stand sistemleri. Hızlı kurulum ve yeniden kullanılabilirlik avantajı."
+    },
+    "germany": {
+      "title": "Almanya Fuar Standı",
+      "description": "Avrupa standartlarında, uluslararası fuarlarda profesyonel temsil. Almanya ve tüm Avrupa'da komple hizmet sunuyoruz."
+    },
+    "detailButton": "Detaylı Bilgi"
+  },
+  "projects": {
+    "title": "Öne Çıkan Projelerimiz",
+    "subtitle": "Tamamladığımız bazı prestijli projeler",
+    "viewAll": "Tüm Projeler",
+    "viewProject": "Projeyi İncele",
+    "categories": {
+      "all": "Tümü",
+      "wooden": "Ahşap Stand",
+      "maxima": "Maxima Stand",
+      "germany": "Almanya"
+    }
+  },
+  "whyUs": {
+    "title": "Neden İlgi Design?",
+    "subtitle": "Fuar standı tasarımında bizi tercih edenlerin nedenleri",
+    "stats": {
+      "experience": {
+        "value": "20+",
+        "label": "Yıllık Deneyim"
+      },
+      "projects": {
+        "value": "500+",
+        "label": "Tamamlanan Proje"
+      },
+      "europe": {
+        "value": "15+",
+        "label": "Avrupa Ülkesi"
+      },
+      "satisfaction": {
+        "value": "%99",
+        "label": "Müşteri Memnuniyeti"
+      }
+    },
+    "features": {
+      "design": {
+        "title": "Özgün Tasarım",
+        "description": "Her markaya özel, yaratıcı ve dikkat çekici tasarımlar"
+      },
+      "quality": {
+        "title": "Kaliteli İşçilik",
+        "description": "En iyi malzemeler ve ustalarla kusursuz uygulama"
+      },
+      "support": {
+        "title": "7/24 Destek",
+        "description": "Fuar sürecinde kesintisiz teknik destek"
+      },
+      "time": {
+        "title": "Zamanında Teslim",
+        "description": "Projelerinizi taahhüt ettiğimiz sürede teslim ediyoruz"
+      }
+    }
+  },
+  "references": {
+    "title": "Referanslarımız",
+    "subtitle": "Bizi tercih eden değerli iş ortaklarımız",
+    "testimonialsTitle": "Müşteri Yorumları"
+  },
+  "footer": {
+    "description": "Fuar standı tasarım ve uygulama alanında 20+ yıllık deneyim. Markanızı en iyi şekilde temsil eden çözümler.",
+    "quickLinks": "Hızlı Linkler",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "placeholders": {
+    "HERO_001": "[HERO_001] - Ana Sayfa Hero Görseli - 1920x1080px - Fuar standı genel görsel",
+    "HERO_002": "[HERO_002] - Hakkımızda Hero Görseli - 1920x600px - Ofis/ekip fotoğrafı",
+    "HIZMET_001": "[HIZMET_001] - Ahşap Stand Görseli - 800x600px - Ahşap stand örneği",
+    "HIZMET_002": "[HIZMET_002] - Maxima Stand Görseli - 800x600px - Maxima stand örneği", 
+    "HIZMET_003": "[HIZMET_003] - Almanya Fuar Görseli - 800x600px - Almanya fuar standı",
+    "PROJE_001": "[PROJE_001] - Proje Görseli #1 - 800x600px - Tamamlanan stand projesi",
+    "PROJE_002": "[PROJE_002] - Proje Görseli #2 - 800x600px - Tamamlanan stand projesi",
+    "PROJE_003": "[PROJE_003] - Proje Görseli #3 - 800x600px - Tamamlanan stand projesi",
+    "PROJE_004": "[PROJE_004] - Proje Görseli #4 - 800x600px - Tamamlanan stand projesi",
+    "PROJE_005": "[PROJE_005] - Proje Görseli #5 - 800x600px - Tamamlanan stand projesi",
+    "PROJE_006": "[PROJE_006] - Proje Görseli #6 - 800x600px - Tamamlanan stand projesi",
+    "PROJE_007": "[PROJE_007] - Proje Görseli #7 - 800x600px - Ekstra proje görseli",
+    "PROJE_008": "[PROJE_008] - Proje Görseli #8 - 800x600px - Ekstra proje görseli",
+    "REF_LOGO_001": "[REF_LOGO_001] - Referans Logo #1 - 200x100px - Müşteri logosu (gri ton)",
+    "REF_LOGO_002": "[REF_LOGO_002] - Referans Logo #2 - 200x100px - Müşteri logosu (gri ton)",
+    "REF_LOGO_003": "[REF_LOGO_003] - Referans Logo #3 - 200x100px - Müşteri logosu (gri ton)",
+    "REF_LOGO_004": "[REF_LOGO_004] - Referans Logo #4 - 200x100px - Müşteri logosu (gri ton)",
+    "REF_LOGO_005": "[REF_LOGO_005] - Referans Logo #5 - 200x100px - Müşteri logosu (gri ton)",
+    "REF_LOGO_006": "[REF_LOGO_006] - Referans Logo #6 - 200x100px - Müşteri logosu (gri ton)",
+    "REF_LOGO_007": "[REF_LOGO_007] - Referans Logo #7 - 200x100px - Müşteri logosu (gri ton)",
+    "REF_LOGO_008": "[REF_LOGO_008] - Referans Logo #8 - 200x100px - Müşteri logosu (gri ton)",
+    "EKIP_001": "[EKIP_001] - Ekip Üyesi #1 - 400x500px - Kurucu/Yönetici fotoğrafı",
+    "EKIP_002": "[EKIP_002] - Ekip Üyesi #2 - 400x500px - Tasarımcı fotoğrafı",
+    "EKIP_003": "[EKIP_003] - Ekip Üyesi #3 - 400x500px - Proje Müdürü fotoğrafı",
+    "EKIP_004": "[EKIP_004] - Ekip Üyesi #4 - 400x500px - Uygulama Sorumlusu fotoğrafı",
+    "HAKKIMIZDA_001": "[HAKKIMIZDA_001] - Hakkımızda Görseli - 1200x800px - Atölye/üretim tesisi görseli"
+  }
+}
