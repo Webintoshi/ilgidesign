@@ -1,3 +1,3 @@
-:HL["/_next/static/chunks/16871cieg4c7o.css","style"]
+:HL["/_next/static/chunks/02eyn3rz7_.vx.css","style"]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"tr","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"hizmetlerimiz","param":null,"prefetchHints":0,"slots":{"children":{"name":"maxima-stand","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"xHAU1XXuguYWifz0yBP3H"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"locale","param":{"type":"d","key":"tr","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"hizmetlerimiz","param":null,"prefetchHints":0,"slots":{"children":{"name":"maxima-stand","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}}}},"staleTime":300,"buildId":"3lRHGEQ_yie_4SCLoLTNX"}
