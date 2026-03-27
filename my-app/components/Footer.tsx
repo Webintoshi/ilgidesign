@@ -163,32 +163,30 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <p className="text-gray-500 text-sm">
-              © {currentYear} İlgi Design. {t.rights}
-            </p>
-            
-            {/* Celebix Signature */}
+          <div className="flex items-center justify-center relative">
+            {/* Celebix Signature - Center */}
             <a 
               href="https://celebix.co/tr" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="group flex items-center justify-center"
+              className="group flex flex-col items-center gap-2"
             >
+              <span className="text-xs text-gray-600 uppercase tracking-widest">{locale === 'tr' ? 'Dijital Çözüm Ortağı' : 'Digital Solution Partner'}</span>
               <Image
                 src="https://celebix.co/Logo/koyu%20logo.svg"
                 alt="Celebix"
-                width={120}
-                height={36}
-                className="h-8 w-auto brightness-200 opacity-60 group-hover:opacity-100 transition-all duration-300"
+                width={140}
+                height={42}
+                className="h-10 w-auto brightness-200 opacity-80 group-hover:opacity-100 transition-all duration-300"
               />
             </a>
 
+            {/* Back to Top - Right */}
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 text-gray-400 hover:text-[#009441] transition-colors"
+              className="absolute right-0 flex items-center space-x-2 text-gray-500 hover:text-[#009441] transition-colors"
             >
-              <span className="text-sm">{locale === 'tr' ? 'Yukarı Çık' : 'Back to Top'}</span>
+              <span className="text-sm hidden sm:inline">{locale === 'tr' ? 'Yukarı Çık' : 'Back to Top'}</span>
               <ArrowUp className="w-4 h-4" />
             </button>
           </div>
