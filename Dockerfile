@@ -1,4 +1,4 @@
-# Multi-stage build for Next.js static site
+# Build stage
 FROM node:22-alpine AS builder
 
 WORKDIR /app
@@ -9,15 +9,17 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM nginx:alpine
+# Serve stage
+FROM node:22-alpine
 
-COPY --from=builder /app/dist /usr/share/nginx/html
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+WORKDIR /app
 
-# Coolify expects port 3000
+# Install serve
+RUN npm install -g serve
+
+# Copy built files
+COPY --from=builder /app/dist ./dist
+
 EXPOSE 3000
 
-# Change nginx to listen on 3000
-RUN sed -i 's/listen 80/listen 3000/' /etc/nginx/conf.d/default.conf
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["serve", "-s", "dist", "-l", "3000"]
