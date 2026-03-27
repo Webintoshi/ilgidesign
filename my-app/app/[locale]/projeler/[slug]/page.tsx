@@ -23,8 +23,34 @@ import {
 import Placeholder from '@/components/Placeholder';
 import { useState } from 'react';
 
+// Translation types
+interface ProjectTranslations {
+  title: string;
+  category: string;
+  client: string;
+  location: string;
+  year: string;
+  size: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  specs: {
+    materials: string[];
+    equipment: string[];
+    flooring: string[];
+    lighting: string[];
+  };
+}
+
+interface ProjectDataType {
+  id: string;
+  slug: string;
+  tr: ProjectTranslations;
+  en: ProjectTranslations;
+}
+
 // Mock project data - Gerçek veri API'den gelecek
-const projectData = {
+const projectData: ProjectDataType = {
   id: 'prestij-ahsap-stand',
   slug: 'prestij-ahsap-stand',
   tr: {
@@ -63,13 +89,27 @@ const projectData = {
   }
 };
 
-const relatedProjects = [
+interface RelatedProject {
+  id: string;
+  titleTr: string;
+  titleEn: string;
+  categoryTr: string;
+  categoryEn: string;
+  slug: string;
+}
+
+const relatedProjects: RelatedProject[] = [
   { id: 'PROJE_002', titleTr: 'Modern Maxima Stand', titleEn: 'Modern Maxima Stand', categoryTr: 'Maxima Stand', categoryEn: 'Maxima Stand', slug: 'modern-maxima-stand' },
   { id: 'PROJE_004', titleTr: 'Lüks Ahşap Tasarım', titleEn: 'Luxury Wood Design', categoryTr: 'Ahşap Stand', categoryEn: 'Wooden Stand', slug: 'luks-ahsap-tasarim' },
   { id: 'PROJE_007', titleTr: 'Köşe Ahşap Stand', titleEn: 'Corner Wood Stand', categoryTr: 'Ahşap Stand', categoryEn: 'Wooden Stand', slug: 'kose-ahsap-stand' },
 ];
 
-const galleryImages = [
+interface GalleryImage {
+  id: string;
+  span: string;
+}
+
+const galleryImages: GalleryImage[] = [
   { id: 'PROJE_DETAY_001', span: 'col-span-2 row-span-2' },
   { id: 'PROJE_DETAY_002', span: 'col-span-1 row-span-1' },
   { id: 'PROJE_DETAY_003', span: 'col-span-1 row-span-1' },
@@ -78,13 +118,33 @@ const galleryImages = [
   { id: 'PROJE_DETAY_006', span: 'col-span-1 row-span-1' },
 ];
 
+interface LabelTranslations {
+  back: string;
+  client: string;
+  location: string;
+  year: string;
+  size: string;
+  category: string;
+  challenge: string;
+  solution: string;
+  result: string;
+  specs: string;
+  materials: string;
+  equipment: string;
+  flooring: string;
+  lighting: string;
+  related: string;
+  viewAll: string;
+  clickToExpand: string;
+}
+
 export default function ProjectDetailPage() {
   const params = useParams();
   const locale = (params?.locale as string) || 'tr';
-  const t = projectData[locale as keyof typeof projectData];
+  const t: ProjectTranslations = projectData[locale as keyof ProjectDataType] || projectData.tr;
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
-  const translations = {
+  const translations: Record<string, LabelTranslations> = {
     tr: {
       back: 'Projelere Dön',
       client: 'Müşteri',
@@ -124,7 +184,7 @@ export default function ProjectDetailPage() {
       clickToExpand: 'Click to expand'
     }
   };
-  const labels = translations[locale as keyof typeof translations];
+  const labels: LabelTranslations = translations[locale] || translations.tr;
 
   return (
     <>
