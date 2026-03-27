@@ -7,12 +7,12 @@ import Placeholder from '@/components/Placeholder';
 import { useParams } from 'next/navigation';
 
 const projects = [
-  { id: 'PROJE_001', category: 'Ahşap Stand', title: 'Prestij Ahşap Stand', client: 'ABC Gıda' },
-  { id: 'PROJE_002', category: 'Maxima Stand', title: 'Modern Maxima Stand', client: 'XYZ Teknoloji' },
-  { id: 'PROJE_003', category: 'Almanya', title: 'Hannover Fuar Projesi', client: '123 Makina' },
-  { id: 'PROJE_004', category: 'Ahşap Stand', title: 'Lüks Ahşap Tasarım', client: 'Premium Mobilya' },
-  { id: 'PROJE_005', category: 'Maxima Stand', title: 'Modüler Stand Sistemi', client: 'Delta Ürünleri' },
-  { id: 'PROJE_006', category: 'Almanya', title: 'Avrupa Standartları', client: 'Epsilon Ltd.' },
+  { id: 'PROJE_001', slug: 'prestij-ahsap-stand', category: 'Ahşap Stand', title: 'Prestij Ahşap Stand', client: 'ABC Gıda' },
+  { id: 'PROJE_002', slug: 'modern-maxima-stand', category: 'Maxima Stand', title: 'Modern Maxima Stand', client: 'XYZ Teknoloji' },
+  { id: 'PROJE_003', slug: 'hannover-fuari-standi', category: 'Almanya', title: 'Hannover Fuar Projesi', client: '123 Makina' },
+  { id: 'PROJE_004', slug: 'luks-ahsap-tasarim', category: 'Ahşap Stand', title: 'Lüks Ahşap Tasarım', client: 'Premium Mobilya' },
+  { id: 'PROJE_005', slug: 'moduler-fuar-standi', category: 'Maxima Stand', title: 'Modüler Stand Sistemi', client: 'Delta Ürünleri' },
+  { id: 'PROJE_006', slug: 'frankfurt-fuar-projesi', category: 'Almanya', title: 'Avrupa Standartları', client: 'Epsilon Ltd.' },
 ];
 
 export default function ProjectsSection() {
@@ -41,20 +41,29 @@ export default function ProjectsSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <motion.div key={project.id} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="group cursor-pointer">
-              <div className="relative rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <Placeholder id={project.id} className="w-full h-full" />
+            <motion.div 
+              key={project.id} 
+              initial={{ opacity: 0, scale: 0.9 }} 
+              whileInView={{ opacity: 1, scale: 1 }} 
+              viewport={{ once: true }} 
+              transition={{ delay: index * 0.1 }} 
+              className="group cursor-pointer"
+            >
+              <Link href={`/${locale}/projeler/${project.slug}/`}>
+                <div className="relative rounded-xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-300">
+                  <div className="aspect-[4/3] overflow-hidden">
+                    <Placeholder id={project.id} className="w-full h-full" showLabel={false} />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <span className="text-[#009441] text-sm font-medium mb-1">{project.category}</span>
+                    <h3 className="text-white text-xl font-bold mb-1">{project.title}</h3>
+                    <p className="text-white/70 text-sm">{project.client}</p>
+                  </div>
+                  <div className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <ArrowUpRight className="w-5 h-5 text-[#009441]" />
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <span className="text-[#009441] text-sm font-medium mb-1">{project.category}</span>
-                  <h3 className="text-white text-xl font-bold mb-1">{project.title}</h3>
-                  <p className="text-white/70 text-sm">{project.client}</p>
-                </div>
-                <div className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <ArrowUpRight className="w-5 h-5 text-[#009441]" />
-                </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
