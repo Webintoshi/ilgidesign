@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Building2 } from 'lucide-react';
 
 export function generateStaticParams() {
   return [{ locale: 'tr' }, { locale: 'en' }];
@@ -7,8 +7,48 @@ export function generateStaticParams() {
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const translations = {
-    tr: { title: 'İletişim', subtitle: 'Fuar standı projeleriniz için bize ulaşın. Ücretsiz keşif ve fiyat teklifi alın.', formTitle: 'Bize Mesaj Gönderin', name: 'Adınız', surname: 'Soyadınız', email: 'E-posta', phone: 'Telefon', company: 'Firma Adı', details: 'Proje Detayları', send: 'Gönder', address: 'Adres', hours: 'Çalışma Saatleri', weekdays: 'Pazartesi - Cuma: 09:00 - 18:00', weekend: 'Cumartesi: 10:00 - 14:00', map: '[HARITA_GORSELI_EKLENECEK]' },
-    en: { title: 'Contact Us', subtitle: 'Get in touch for your exhibition stand projects. Free consultation and quote.', formTitle: 'Send Us a Message', name: 'First Name', surname: 'Last Name', email: 'Email', phone: 'Phone', company: 'Company Name', details: 'Project Details', send: 'Send', address: 'Address', hours: 'Working Hours', weekdays: 'Monday - Friday: 09:00 - 18:00', weekend: 'Saturday: 10:00 - 14:00', map: '[MAP_IMAGE_TO_BE_ADDED]' }
+    tr: { 
+      title: 'İletişim', 
+      subtitle: 'Fuar standı projeleriniz için bize ulaşın. Ücretsiz keşif ve fiyat teklifi alın.', 
+      formTitle: 'Bize Mesaj Gönderin', 
+      name: 'Adınız', 
+      surname: 'Soyadınız', 
+      email: 'E-posta', 
+      phone: 'Telefon', 
+      company: 'Firma Adı', 
+      details: 'Proje Detayları', 
+      send: 'Gönder',
+      turkeyOffice: 'Türkiye Ofis',
+      germanyOffice: 'Almanya Üretim',
+      address: 'Adres',
+      phoneLabel: 'Telefon',
+      emailLabel: 'E-posta',
+      hours: 'Çalışma Saatleri', 
+      weekdays: 'Pazartesi - Cuma: 09:00 - 18:00', 
+      weekend: 'Cumartesi: 10:00 - 14:00',
+      getDirections: 'Yol Tarifi Al'
+    },
+    en: { 
+      title: 'Contact Us', 
+      subtitle: 'Get in touch for your exhibition stand projects. Free consultation and quote.', 
+      formTitle: 'Send Us a Message', 
+      name: 'First Name', 
+      surname: 'Last Name', 
+      email: 'Email', 
+      phone: 'Phone', 
+      company: 'Company Name', 
+      details: 'Project Details', 
+      send: 'Send',
+      turkeyOffice: 'Turkey Office',
+      germanyOffice: 'Germany Production',
+      address: 'Address',
+      phoneLabel: 'Phone',
+      emailLabel: 'Email',
+      hours: 'Working Hours', 
+      weekdays: 'Monday - Friday: 09:00 - 18:00', 
+      weekend: 'Saturday: 10:00 - 14:00',
+      getDirections: 'Get Directions'
+    }
   };
   const t = translations[locale as keyof typeof translations];
 
@@ -24,6 +64,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h2 className="text-2xl font-bold mb-6">{t.formTitle}</h2>
               <form className="space-y-6">
@@ -60,37 +101,98 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </form>
             </div>
 
+            {/* Contact Info Cards */}
             <div className="space-y-6">
-              <div className="flex items-start space-x-4 bg-gray-50 rounded-xl p-6">
-                <div className="w-12 h-12 bg-[#009441]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-[#009441]" />
+              {/* Turkey Office */}
+              <div className="bg-gray-50 rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-[#009441]/10 rounded-xl flex items-center justify-center">
+                    <Building2 className="w-6 h-6 text-[#009441]" />
+                  </div>
+                  <h3 className="font-bold text-xl text-gray-900">{t.turkeyOffice}</h3>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">{t.address}</h3>
-                  <p className="text-gray-600">İstanbul, Türkiye<br />[ADRES_BILGISI_EKLENECEK]</p>
+                
+                <div className="space-y-4 pl-15">
+                  <div className="flex items-start space-x-4">
+                    <MapPin className="w-5 h-5 text-[#009441] mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-600">
+                        Teyyaredüzü Mah. Şht TGN Bahtiyar Aydın Cad.<br />
+                        Demir Sok No: 24/26<br />
+                        Merkez / Giresun / Türkiye
+                      </p>
+                      <a 
+                        href="https://maps.google.com/?q=Teyyaredüzü+Mah.+Şht+TGN+Bahtiyar+Aydın+Cad.+Demir+Sok+No:+24/26+Merkez/Giresun"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-[#009441] text-sm mt-2 hover:underline"
+                      >
+                        {t.getDirections} →
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <Phone className="w-5 h-5 text-[#009441] flex-shrink-0" />
+                    <a href="tel:+905433883028" className="text-gray-600 hover:text-[#009441] transition-colors">
+                      +90 543 388 30 28
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4 bg-gray-50 rounded-xl p-6">
-                <div className="w-12 h-12 bg-[#009441]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-[#009441]" />
+              {/* Germany Office */}
+              <div className="bg-gray-50 rounded-2xl p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-[#009441]/10 rounded-xl flex items-center justify-center">
+                    <Building2 className="w-6 h-6 text-[#009441]" />
+                  </div>
+                  <h3 className="font-bold text-xl text-gray-900">{t.germanyOffice}</h3>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-1">Phone</h3>
-                  <a href="tel:+901234567890" className="text-gray-600 hover:text-[#009441] transition-colors">[TELEFON_NUMARASI]</a>
+                
+                <div className="space-y-4 pl-15">
+                  <div className="flex items-start space-x-4">
+                    <MapPin className="w-5 h-5 text-[#009441] mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-600">
+                        Konstantin Str. 107-111<br />
+                        41238 Mönchengladbach<br />
+                        Deutschland
+                      </p>
+                      <a 
+                        href="https://maps.google.com/?q=Konstantin+Str.+107-111,+41238+Mönchengladbach"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-[#009441] text-sm mt-2 hover:underline"
+                      >
+                        {t.getDirections} →
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <Phone className="w-5 h-5 text-[#009441] flex-shrink-0" />
+                    <a href="tel:+905549475900" className="text-gray-600 hover:text-[#009441] transition-colors">
+                      +90 554 947 59 00
+                    </a>
+                  </div>
                 </div>
               </div>
 
+              {/* Email */}
               <div className="flex items-center space-x-4 bg-gray-50 rounded-xl p-6">
                 <div className="w-12 h-12 bg-[#009441]/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-[#009441]" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Email</h3>
-                  <a href="mailto:info@ilgidesign.com" className="text-gray-600 hover:text-[#009441] transition-colors">info@ilgidesign.com</a>
+                  <h3 className="font-semibold text-lg mb-1">{t.emailLabel}</h3>
+                  <a href="mailto:info@ilgidesign.net" className="text-gray-600 hover:text-[#009441] transition-colors">
+                    info@ilgidesign.net
+                  </a>
                 </div>
               </div>
 
+              {/* Working Hours */}
               <div className="flex items-start space-x-4 bg-gray-50 rounded-xl p-6">
                 <div className="w-12 h-12 bg-[#009441]/10 rounded-xl flex items-center justify-center flex-shrink-0">
                   <Clock className="w-6 h-6 text-[#009441]" />
@@ -99,10 +201,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                   <h3 className="font-semibold text-lg mb-1">{t.hours}</h3>
                   <p className="text-gray-600">{t.weekdays}<br />{t.weekend}</p>
                 </div>
-              </div>
-
-              <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                <p className="text-gray-500">{t.map}</p>
               </div>
             </div>
           </div>

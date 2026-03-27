@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import { Phone, Mail, MapPin, ArrowUp, Globe, Share2 } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, Globe, Share2, Building2 } from 'lucide-react';
 
 export default function Footer() {
   const params = useParams();
@@ -18,6 +18,8 @@ export default function Footer() {
     services: locale === 'tr' ? 'Hizmetler' : 'Services',
     contact: locale === 'tr' ? 'İletişim' : 'Contact',
     rights: locale === 'tr' ? 'Tüm hakları saklıdır.' : 'All rights reserved.',
+    turkeyOffice: locale === 'tr' ? 'Türkiye Ofis' : 'Turkey Office',
+    germanyOffice: locale === 'tr' ? 'Almanya Üretim' : 'Germany Production',
   };
 
   const scrollToTop = () => {
@@ -100,25 +102,58 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-6">{t.contact}</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-[#009441] mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">
-                  İstanbul, Türkiye<br />
-                  [ADRES_BILGISI_EKLENECEK]
-                </span>
+            <ul className="space-y-6">
+              {/* Turkey Office */}
+              <li className="space-y-2">
+                <div className="flex items-center gap-2 text-[#009441] font-medium text-sm">
+                  <Building2 className="w-4 h-4" />
+                  {t.turkeyOffice}
+                </div>
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-400 text-sm">
+                    Teyyaredüzü Mah. Şht TGN Bahtiyar Aydın Cad.<br />
+                    Demir Sok No: 24/26<br />
+                    Merkez / Giresun
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-4 h-4 text-gray-500 flex-shrink-0" />
+                  <a href="tel:+905433883028" className="text-gray-400 text-sm hover:text-[#009441] transition-colors">
+                    +90 543 388 30 28
+                  </a>
+                </div>
               </li>
-              <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-[#009441] flex-shrink-0" />
-                <a href="tel:+901234567890" className="text-gray-400 text-sm hover:text-[#009441] transition-colors">
-                  [TELEFON_NUMARASI]
-                </a>
+
+              {/* Germany Office */}
+              <li className="space-y-2 pt-4 border-t border-white/10">
+                <div className="flex items-center gap-2 text-[#009441] font-medium text-sm">
+                  <Building2 className="w-4 h-4" />
+                  {t.germanyOffice}
+                </div>
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-4 h-4 text-gray-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-400 text-sm">
+                    Konstantin Str. 107-111<br />
+                    41238 Mönchengladbach
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-4 h-4 text-gray-500 flex-shrink-0" />
+                  <a href="tel:+905549475900" className="text-gray-400 text-sm hover:text-[#009441] transition-colors">
+                    +90 554 947 59 00
+                  </a>
+                </div>
               </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-[#009441] flex-shrink-0" />
-                <a href="mailto:info@ilgidesign.com" className="text-gray-400 text-sm hover:text-[#009441] transition-colors">
-                  info@ilgidesign.com
-                </a>
+
+              {/* Email */}
+              <li className="pt-4 border-t border-white/10">
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-4 h-4 text-[#009441] flex-shrink-0" />
+                  <a href="mailto:info@ilgidesign.net" className="text-gray-400 text-sm hover:text-[#009441] transition-colors">
+                    info@ilgidesign.net
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
