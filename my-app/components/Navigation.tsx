@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams, usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -60,15 +61,15 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href={`/${locale}/`} className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-[#009441] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">İ</span>
-              </div>
-              <span className={`text-xl font-bold transition-colors ${
-                isScrolled ? 'text-black' : 'text-black'
-              }`}>
-                İlgi Design
-              </span>
+            <Link href={`/${locale}/`} className="flex items-center">
+              <Image
+                src="/images/ilgi-design-logo.webp"
+                alt="İlgi Design"
+                width={180}
+                height={50}
+                className="h-10 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}

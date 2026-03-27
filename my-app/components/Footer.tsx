@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { Phone, Mail, MapPin, ArrowUp, Globe, Share2 } from 'lucide-react';
 
@@ -30,11 +31,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link href={`/${locale}/`} className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-[#009441] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">İ</span>
-              </div>
-              <span className="text-xl font-bold">İlgi Design</span>
+            <Link href={`/${locale}/`} className="flex items-center">
+              <Image
+                src="/images/ilgi-design-logo.webp"
+                alt="İlgi Design"
+                width={180}
+                height={50}
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed">
               {t.description}
