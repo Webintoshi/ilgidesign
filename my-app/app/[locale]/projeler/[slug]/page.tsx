@@ -141,7 +141,7 @@ interface LabelTranslations {
 export default function ProjectDetailPage() {
   const params = useParams();
   const locale = (params?.locale as string) || 'tr';
-  const t: ProjectTranslations = projectData[locale as keyof ProjectDataType] || projectData.tr;
+  const t: ProjectTranslations = (locale === 'en' ? projectData.en : projectData.tr);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
 
   const translations: Record<string, LabelTranslations> = {
