@@ -167,6 +167,26 @@ export default function Footer() {
             <p className="text-gray-500 text-sm">
               © {currentYear} İlgi Design. {t.rights}
             </p>
+            
+            {/* Celebix Signature */}
+            <a 
+              href="https://celebix.co/tr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300"
+            >
+              <span className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">
+                {locale === 'tr' ? ' Tasarım ve Geliştirme' : ' Design & Development'}
+              </span>
+              <Image
+                src="https://celebix.co/Logo/koyu%20logo.svg"
+                alt="Celebix"
+                width={80}
+                height={24}
+                className="h-5 w-auto brightness-200 opacity-70 group-hover:opacity-100 transition-all duration-300"
+              />
+            </a>
+
             <button
               onClick={scrollToTop}
               className="flex items-center space-x-2 text-gray-400 hover:text-[#009441] transition-colors"
